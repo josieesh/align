@@ -10,7 +10,7 @@ defmodule HelloWeb.HelloController do
         render(conn, "show.html", messenger: messenger)
     end
 
-    def processEntry(conn, %{"messenger" => messenger}) do
-        render(conn, "show.html", messenger: messenger)
+    def processEntry(conn, %{"id" => id}) do
+        render(conn, "process.html", conn.body())
     end
 end
